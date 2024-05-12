@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+  background-color: var(--Very-Dark-Blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1,
+h2 {
+  color: var(--White);
+}
+
+p {
+  color: var(--Light-Grey);
+  line-height: 1.8;
+}
+
+.cont,
+.thanks-cont {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(212, 16%, 16%),
+    hsl(220, 16%, 16%)
+  );
+  width: 400px;
+  padding: 2rem 1.5rem;
+  border-radius: 2rem;
+}
+
+.cont img {
+  padding: 0.8rem;
+  border-radius: 50%;
+  background-color: hsl(213, 19%, 18%);
+  margin-bottom: 2rem;
+}
+
+.rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.cont h1,
+.thanks-cont h2 {
+  margin-bottom: 1rem;
+}
+
+.rate button {
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  border: none;
+  color: var(--White);
+  background-color: var(--Dark-Blue);
+}
+.rate button:hover {
+  background-color: var(--Medium-Grey);
+}
+
+.rate button:focus {
+  background-color: var(--Orange);
+}
+
+#submit {
+  width: 100%;
+  background-color: var(--Orange);
+  color: var(--White);
+  padding: 0.625rem 2rem 0.5rem;
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  margin-top: 2rem;
+  transition: 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.9rem;
+}
+
+#submit:hover {
+  background-color: var(--White);
+  color: var(--Orange);
+}
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  user-select: none;
+  cursor: pointer;
+}
+
+.rate-cont {
+  display: inline-block;
+  background-color: hsl(213, 19%, 18%);
+  color: var(--Orange);
+  padding: 0.3rem 1rem 0;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.thanks-cont {
+  text-align: center;
+  display: none;
+}
+.thanks-cont h2 {
+  margin-top: 2rem;
+}
+
+.attribution {
+  font-size: 12px;
+  color: var(--White);
+  text-align: center;
+  margin-top: 10px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 450px) {
+  .cont,
+  .thanks-cont {
+    width: 90%;
+  }
+
+  .rate button {
+    height: 45px;
+    width: 45px;
+  }
+}
